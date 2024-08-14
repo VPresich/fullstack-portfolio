@@ -67,7 +67,7 @@
 }
 
 .mobile-menu-item-link {
-  font-family: 'Inter Tight', sans-serif;
+  font-family: 'InterTight', sans-serif;
   font-weight: 500;
   font-size: 16px;
   letter-spacing: -0.02em;
@@ -84,7 +84,7 @@
   justify-content: center;
   align-items: center;
   background: var(--button-text);
-  font-family: 'Inter Tight', sans-serif;
+  font-family: 'InterTight', sans-serif;
   font-weight: 500;
   font-size: 14px;
   letter-spacing: -0.02em;
