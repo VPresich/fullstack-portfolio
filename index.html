@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/fullstack-portfolio/assets/logo-d9f7ef8e.svg" />
+    <link rel="icon" type="image/svg+xml" href="/fullstack-portfolio/assets/logo-BX_vAQxs.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Fullstack Portfolio</title>
 
@@ -11,9 +11,10 @@
       href="https://cdn.jsdelivr.net/npm/modern-normalize@2.0.0/modern-normalize.min.css"
     />
 
-    
     <script type="module" crossorigin src="/fullstack-portfolio/commonHelpers.js"></script>
-    <link rel="stylesheet" href="/fullstack-portfolio/assets/index-3415817b.css">
+    <link rel="modulepreload" crossorigin href="/fullstack-portfolio/assets/vendor-CTqzIL4Y.js">
+    <link rel="stylesheet" crossorigin href="/fullstack-portfolio/assets/vendor-CzG10Eoq.css">
+    <link rel="stylesheet" crossorigin href="/fullstack-portfolio/assets/index-CZBIN1_-.css">
   </head>
   <body>
     <main>
@@ -22,7 +23,7 @@
     <a class="header-logo" href="./index.html">
       <img
         class="header-logo-image"
-        src="/fullstack-portfolio/assets/logo-d9f7ef8e.svg"
+        src="/fullstack-portfolio/assets/logo-BX_vAQxs.svg"
         alt="Photo of Jefferson"
         width="80"
         height="80"
@@ -68,63 +69,197 @@
   </div>
 </header>
 
-<!-- 
-  <ul class="header-social-list list">
-      <li class="header-social-list-item">
-        <a
-          class="header-social-list-link"
-          target="_blank"
-          rel="noopener"
-          href="https://www.facebook.com/goITclub/"
+      <section class="hero-section">
+  <div class="container hero-container">
+    <h1 class="hero-title">
+      Hello. I&#39;m Fullstack developer Lloyd Jefferson.
+    </h1>
+    <div class="last-line">
+      <ul class="hero-social-list list">
+        <li class="hero-social-list-item">
+          <a
+            class="hero-social-list-link"
+            target="_blank"
+            rel="noopener"
+            href="https://www.instagram.com/goitclub/"
+            >ig
+          </a>
+        </li>
+        <li class="hero-social-list-item">
+          <a
+            class="hero-social-list-link"
+            target="_blank"
+            rel="noopener"
+            href="https://www.facebook.com/goITclub/"
+            >fb
+          </a>
+        </li>
+        <li class="hero-social-list-item">
+          <a
+            class="hero-social-list-link"
+            target="_blank"
+            rel="noopener"
+            href="https://www.youtube.com/GoIT"
+            >yt
+          </a>
+        </li>
+        <li class="hero-social-list-item">
+          <a
+            class="header-social-list-link"
+            target="_blank"
+            rel="noopener"
+            href="https://github.com/VPresich/fullstack-portfolio"
+            >gh
+          </a>
+        </li>
+      </ul>
+      <address class="hero-address">
+        <a href="email:lloydjefferson@gmail.com" class="hero-email-link"
+          >lloydjefferson@gmail.com</a
         >
-          <svg
-            class="header-social-list-icon"
-            width="20"
-            height="20"
-            aria-label="facebook icon"
-          >
-            <use href="./img/icons.svg#icon-facebook"></use>
-          </svg>
-        </a>
-      </li>
-      <li class="header-social-list-item">
-        <a
-          class="header-social-list-link"
-          target="_blank"
-          rel="noopener"
-          href="https://www.instagram.com/goitclub/"
-        >
-          <svg
-            class="header-social-list-icon"
-            width="20"
-            height="20"
-            aria-label="instagram icon"
-          >
-            <use href="./img/icons.svg#icon-instagram"></use>
-          </svg>
-        </a>
-      </li>
-      <li class="header-social-list-item">
-        <a
-          class="header-social-list-link"
-          target="_blank"
-          rel="noopener"
-          href="https://www.youtube.com/c/GoIT"
-        >
-          <svg
-            class="header-social-list-icon"
-            width="20"
-            height="20"
-            aria-label="youtube icon"
-          >
-            <use href="./img/icons.svg#icon-youtube"></use>
-          </svg>
-        </a>
-      </li>
-    </ul> -->
+      </address>
+    </div>
+  </div>
+</section>
 
-      
-      
+      <section class="section about-section">
+  <div class="container about-container">
+    <h2 class="visually-hidden">About me</h2>
+    <div class="about-info-wrapper">
+      <div class="about-text-wrapper">
+        <p class="about-text">
+          I work with people all over the world to create impressive and
+          <span class="about-text-red">functional</span>
+          <span class="about-text-grey">websites</span> that reflect each
+          client's unique personality.
+        </p>
+      </div>
+
+      <div class="about-image-wrapper">
+  <picture>
+    <source
+      media="(min-width: 1440px)"
+      srcset="/fullstack-portfolio/assets/photo-desktop@1x-DXEpl9Hm.webp 1x, /fullstack-portfolio/assets/photo-desktop@2x-BbLeTEfa.webp 2x"
+    />
+    <source
+      media="(min-width: 768px)"
+      srcset="/fullstack-portfolio/assets/photo-tablet@1x-mv9Ks9Ip.webp 1x, /fullstack-portfolio/assets/photo-tablet@2x-DNCcqGnE.webp 2x"
+    />
+    <source
+      media="(max-width: 767px)"
+      srcset="/fullstack-portfolio/assets/photo-mobile@1x-C0lFd4Hy.webp 1x, /fullstack-portfolio/assets/photo-mobile@2x-5E3u1U63.webp 2x"
+    />
+    <img
+      class="about-image"
+      src="./img/about-me/about-mobile@1x.webp"
+      alt="photo of Jefferson"
+    />
+  </picture>
+</div>
+
+    </div>
+
+    <ul class="about-acc-container accordion-container">
+  <li class="ac about-acc-item">
+    <h3 class="about-acc-header ac-header ac-trigger">
+      About me
+      <button type="button" class="about-acc-button">
+        <svg
+          class="about-acc-icon"
+          aria-label="Arrow icon"
+          width="18"
+          height="18"
+        >
+          <use href="/fullstack-portfolio/assets/symbols-Cqk8WLaF.svg#icon-dropdown"></use>
+        </svg>
+      </button>
+    </h3>
+
+    <div class="about-acc-panel ac-panel">
+      <ul class="about-acc-text">
+        <li class="about-acc-list-item">
+          I am Lloyd Jefferson, a talented programmer with extensive expertise
+          in software development. I have an understanding of different
+          programming languages and technologies, always ready to improve my
+          skills. I always follow the latest trends and look for unconventional,
+          creative solutions to problems. I have a high level of analytical
+          skills and am able to effectively solve even the most difficult tasks
+          encountered on the way.
+        </li>
+        <li class="about-acc-list-item">
+          Able to work both independently and in a team. I can effectively
+          cooperate with colleagues, exchanging ideas and finding optimal
+          solutions. Professional maturity allows you to calmly cope with
+          challenges and stressful situations, while maintaining a high quality
+          of work. I am always looking for opportunities for self-improvement. I
+          actively study new technologies and practices to stay abreast of the
+          latest innovations. I have a strong understanding of various
+          programming languages, frameworks and architectural concepts that
+          allow me to create efficient and scalable software.
+        </li>
+      </ul>
+    </div>
+  </li>
+
+  <li class="about-acc-item ac">
+    <h3 class="about-acc-header ac-header ac-trigger">
+      Role
+      <button type="button" class="about-acc-button">
+        <svg
+          class="about-acc-icon"
+          aria-label="Arrow icon"
+          width="28"
+          height="28"
+        >
+          <use href="/fullstack-portfolio/assets/symbols-Cqk8WLaF.svg#icon-dropdown"></use>
+        </svg>
+      </button>
+    </h3>
+
+    <div class="abbout-acc-panel ac-panel">
+      <ul class="about-acc-list">
+        <li class="about-acc-list-item">Frontend development</li>
+        <li class="about-acc-list-item">HeadlessCMS, Wordpress</li>
+        <li class="about-acc-list-item">Blender(enjoy)</li>
+      </ul>
+    </div>
+  </li>
+
+  <li class="about-acc-item ac">
+    <h3 class="about-acc-header ac-header ac-trigger">
+      Education
+      <button type="button" class="about-acc-button">
+        <svg
+          class="about-acc-icon"
+          aria-label="Arrow icon"
+          width="28"
+          height="28"
+        >
+          <use href="../img/icons/symbols.svg#icon-dropdown"></use>
+        </svg>
+      </button>
+    </h3>
+
+    <div class="abbout-acc-panel ac-panel">
+      <ul class="about-acc-list">
+        <li class="about-acc-list-item">
+          2018 - 2019 / Frontend Development Diploma, GoIT IT School, New York
+        </li>
+        <li class="about-acc-list-item">
+          2019 - 2020 / Advanced Web Development Certificate, GoIT IT School,
+          New York
+        </li>
+        <li class="about-acc-list-item">
+          2020 - 2022 / Advanced Blender Animation Techniques, Udemy
+        </li>
+      </ul>
+    </div>
+  </li>
+</ul>
+
+  </div>
+</section>
+
       
       
       
@@ -140,7 +275,7 @@
         height="28"
         aria-label="Close icon"
       >
-        <use href="/fullstack-portfolio/assets/symbols-9be1af6a.svg#icon-x"></use>
+        <use href="/fullstack-portfolio/assets/symbols-Cqk8WLaF.svg#icon-x"></use>
       </svg>
     </button>
 
@@ -172,6 +307,5 @@
 
     </main>
 
-    
   </body>
 </html>
