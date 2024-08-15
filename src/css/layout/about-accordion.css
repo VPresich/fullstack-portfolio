@@ -1,0 +1,75 @@
+.about-acc-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.about-acc-item {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 32px;
+  border-bottom: 1px solid rgba(250, 250, 250, 0.2);
+}
+
+.about-acc-header {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: rgba(250, 250, 250, 0.4);
+  display: flex;
+  justify-content: space-between;
+}
+
+.about-acc-button {
+  border: 1px solid rgba(250, 250, 250, 0.2);
+  border-radius: 100px;
+  width: 36px;
+  height: 36px;
+  padding-top: 9px;
+  font-display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  background-color: transparent;
+  margin: 0;
+}
+
+.about-acc-icon {
+  width: 18px;
+  height: 18px;
+  stroke: var(--main-text);
+  transition: transform 0.3s ease;
+}
+
+.about-acc-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.about-acc-text {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.about-acc-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.about-acc-list-item {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: -0.02em;
+  color: var(--main-text);
+}
+
+/* .about-acc-item.is-open .about-acc-icon {
+  transform: rotate(180deg);
+  transition: transform 0.3s ease-out;
+} */

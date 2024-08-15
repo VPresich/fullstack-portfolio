@@ -5,13 +5,7 @@
   width: 100vw;
   height: 100vh;
 
-  background-image: repeating-linear-gradient(
-      90deg,
-      rgba(255, 255, 255, 0.2) 0%,
-      rgba(59, 59, 59, 0.2) 16.67%,
-      rgba(255, 255, 255, 0.2) 42px
-    ),
-    url('/img/hero/bgr.jpg');
+  background-image: url('/img/hero/bgr@1x.webp');
 
   background-repeat: repeat, no-repeat;
   background-position: 0 0;
@@ -95,14 +89,16 @@
   background: var(--button-hover);
 }
 
-/* @media screen and (min-resolution: 2dppx), (min-resolution: 192dpi) {
-  .mobile-menu {
-    background-image: url('/img/header/bgr-mobile@2x.jpg');
-  }
-} */
-
 @media screen and (min-width: 768px) {
   .mobile-menu {
     display: none;
+  }
+}
+
+@media screen and (min-resolution: 192dpi) and (max-width: 767px),
+  screen and (min-resolution: 2dppx) and (max-width: 767px),
+  screen and (min-device-pixel-ratio: 2) and (max-width: 767px) {
+  .mobile-menu {
+    background-image: url('/img/hero/bgr@2x.webp');
   }
 }

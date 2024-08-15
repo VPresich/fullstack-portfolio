@@ -10,6 +10,8 @@
 @import url('./layout/header.css');
 @import url('./layout/hero.css');
 @import url('./layout/about-me.css');
+@import url('./layout/about-accordion.css');
+
 @import url('./layout/benefits.css');
 @import url('./layout/projects.css');
 @import url('./layout/faq.css');
