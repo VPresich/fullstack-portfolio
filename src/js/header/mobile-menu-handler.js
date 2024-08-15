@@ -26,6 +26,6 @@ function handleScrollDocument(event) {
   console.log('item:', item);
   if (!item.matches('a')) return;
   const targetId = item.getAttribute('href').substring(1);
-  // scrollToElement(targetId);
+  scrollToElement(targetId);
   handleCloseMobileMenu();
 }
