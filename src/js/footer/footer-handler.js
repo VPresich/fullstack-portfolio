@@ -23,8 +23,6 @@ const successEmailSpanRef = document.querySelector('.footer-email-success');
 
 formRef && formRef.addEventListener('submit', handleSendMessage);
 
-console.log(emailInputRef);
-
 emailInputRef && emailInputRef.addEventListener('input', changeContolsStatus);
 commentInputRef &&
   commentInputRef.addEventListener('input', changeContolsStatus);

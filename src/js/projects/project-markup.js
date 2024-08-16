@@ -1,8 +1,9 @@
-<section class="projects-section">
-  <div class="container projects-container">
-    <h2 class="projects-title">Projects</h2>
-    <ul class="projects-list">
-      <li class="projects-item">
+function projectsMarkup(projectsUrl = []) {
+  return projectsUrl.reduce(
+    (strMarkup, { url1x, url2x }) =>
+      strMarkup +
+      `
+       <li class="projects-item">
         <div class="project-info-container">
           <ul class="project-lang-list">
             <li class="projects-lang-item">
@@ -29,39 +30,22 @@
           <picture>
             <source
               srcset="
-                ./img/projects/project01@1x.webp 1x,
-                ./img/projects/project01@2x.webp 2x
+                ${url1x} 1x,
+                ${url2x} 2x
               "
               type="image/webp"
             />
             <img
               class="projects-img"
-              src="./img/projects/project01@1x.webp"
+              src="${url1x}"
               alt="Project 01 main page"
             />
           </picture>
         </div>
       </li>
-    </ul>
-    <button class="projects-arrow-btn-next">
-      <svg
-        class="projects-arrow-icon"
-        aria-label="Arrow icon"
-        width="28"
-        height="28"
-      >
-        <use href="/img/icons/symbols.svg#icon-arrow-right"></use>
-      </svg>
-    </button>
-    <button class="projects-arrow-btn-prev">
-      <svg
-        class="projects-arrow-icon"
-        aria-label="Arrow icon"
-        width="28"
-        height="28"
-      >
-        <use href="/img/icons/symbols.svg#icon-arrow-left"></use>
-      </svg>
-    </button>
-  </div>
-</section>
+      `,
+    ''
+  );
+}
+
+export default projectsMarkup;

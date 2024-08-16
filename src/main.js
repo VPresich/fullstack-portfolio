@@ -6,3 +6,4 @@ import './js/reviews/reviews-handler';
 import './js/faq/faq-handler';
 import './js/reviews/reviwes-swiper';
 import './js/footer/footer-handler';
+import './js/projects/projects-handler';

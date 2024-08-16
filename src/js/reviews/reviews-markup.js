@@ -1,4 +1,4 @@
-function exercisesGalleryMarkup(reviews = []) {
+function reviewsMarkup(reviews = []) {
   if (!reviews || reviews.length === 0) {
     return '';
   }
@@ -46,4 +46,4 @@ function escapeHTML(str) {
   });
 }
 
-export default exercisesGalleryMarkup;
+export default reviewsMarkup;
