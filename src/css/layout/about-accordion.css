@@ -100,3 +100,22 @@
   transform: rotate(180deg);
   transition: transform 0.3s ease-out;
 }
+
+@media screen and (min-width: 768px) {
+  .about-acc-button {
+    width: 40px;
+    height: 40px;
+  }
+
+  .about-acc-icon {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .about-acc-panel {
+    margin-left: 696px;
+    gap: 32px;
+  }
+}
