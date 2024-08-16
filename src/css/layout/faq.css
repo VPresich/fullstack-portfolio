@@ -1,4 +1,19 @@
-@media screen and (min-width: 375px) {
+.faq-section {
+  padding-top: 64px;
+}
+
+.faq-container {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.faq-title {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: -0.02em;
+  color: rgba(250, 250, 250, 0.4);
 }
 
 @media screen and (min-width: 768px) {
