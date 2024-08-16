@@ -65,17 +65,9 @@
   color: rgba(250, 250, 250, 0.6);
 }
 
-.reviews-buttons {
-  bottom: 0;
-  left: 50%;
-  position: absolute;
-  display: flex;
-  gap: 4px;
-}
-
 .reviews-arrow-btn-next {
   bottom: 0;
-  left: calc(50% - 40px);
+  left: calc(50% + 40px);
   position: absolute;
   width: 28px;
   height: 28px;
@@ -91,7 +83,7 @@
 
 .reviews-arrow-btn-prev {
   bottom: 0;
-  left: calc(50% + 40px);
+  left: calc(50% - 40px);
   position: absolute;
   width: 28px;
   height: 28px;
@@ -102,13 +94,13 @@
   padding: 0;
   margin: 0;
   background-color: transparent;
-  z-index: 900;
+  z-index: 300;
 }
 
 .reviews-arrow-icon {
   width: 100%;
   height: 100%;
-  /* fill: var(--main-text); */
+  fill: var(--main-text);
   stroke: var(--main-text);
 }
 
@@ -116,7 +108,7 @@
   display: none;
 }
 
-.swiper-button-previous {
+.swiper-button-prev {
   display: none;
 }
 
