@@ -88,20 +88,21 @@
 }
 
 @media screen and (min-width: 768px) {
-  .about-acc-button {
+  .faq-acc-button {
     width: 40px;
     height: 40px;
-  }
-
-  .about-acc-icon {
-    width: 20px;
-    height: 20px;
   }
 }
 
 @media screen and (min-width: 1440px) {
-  .about-acc-panel {
-    margin-left: 696px;
-    gap: 32px;
+  .faq-acc-container {
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0;
+  }
+
+  .faq-acc-item {
+    width: calc((100% - 4px) / 2);
   }
 }
