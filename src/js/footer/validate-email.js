@@ -1,4 +1,6 @@
-import { EMAIL_PATERN } from './errors-messages';
-const validateEmail = email => String(email).toLowerCase().match(EMAIL_PATERN);
+const validateEmail = email => {
+  console.log(email);
+  return /^[\w.-]+@[a-zA-Z\d.-]+\.[a-zA-Z]{2,7}$/.test(email);
+};
 
 export default validateEmail;

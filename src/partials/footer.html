@@ -34,11 +34,10 @@
       <div class="footer-email-wrapper">
         <input
           type="text"
-          name="footer-email"
-          class="footer-input"
+          name="email"
+          class="footer-input footer-email"
           placeholder="clients@gmail.com"
           required
-          pattern="^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$"
         />
         <span class="footer-email-error">Invalid email, try again</span>
         <span class="footer-email-success">Succes!</span>
@@ -47,11 +46,12 @@
       <div class="footer-comment-wrapper">
         <input
           type="text"
-          name="footer-email"
-          class="footer-input"
+          name="comment"
+          class="footer-input footer-comment"
           placeholder="comments"
           required
         />
+        <span class="footer-comment-error">Invalid comment, try again</span>
       </div>
 
       <button class="footer-button" type="submit">Send</button>

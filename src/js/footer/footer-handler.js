@@ -1,65 +1,87 @@
-import { createErrMsg, createOkMsg } from '../common/create-msg';
-import validateEmail from '../api/validate-email';
-import { BASE_URL } from '../api/api-constants';
+import { createErrMsg, createOkMsg } from '../helpers/create-msg';
+import modalCreate from '../modal-window/modal-window-create';
+import validateEmail from './validate-email';
+import { axiosInst } from '../helpers/api';
 import {
-  ERROR409_MSG,
   ERROR_FETCH,
-  SUCCESS_MSG,
   WRONG_EMAIL,
-} from './messages';
+  NO_COMMENT,
+  NO_EMAIL,
+} from './errors-messages';
 
-const footerForm = document.querySelector('.footer-subscription');
-const footerInput = footerForm.querySelector('.input-footer');
+import openModalWindow from '../modal-window/modalwindow-handle';
+
+const formRef = document.querySelector('.footer-form');
+
+const emailInputRef = formRef.querySelector('.footer-email');
+const commentInputRef = formRef.querySelector('.footer-comment');
 const footerBtn = document.querySelector('.footer-button');
+const errEmailSpanRef = document.querySelector('.footer-email-error');
+const errCommentSpanRef = document.querySelector('.footer-comment-error');
 
-footerForm && footerForm.addEventListener('submit', handleSubscription);
-footerInput && footerInput.addEventListener('input', changeBtnStatus);
+const successEmailSpanRef = document.querySelector('.footer-email-success');
 
-function handleSubscription(event) {
+formRef && formRef.addEventListener('submit', handleSendMessage);
+
+console.log(emailInputRef);
+
+emailInputRef && emailInputRef.addEventListener('input', changeContolsStatus);
+commentInputRef &&
+  commentInputRef.addEventListener('input', changeContolsStatus);
+
+async function handleSendMessage(event) {
   event.preventDefault();
 
-  const footerEmailValue = footerInput.value.trim();
-  if (!footerEmailValue) {
+  const emailValue = emailInputRef.value.trim();
+  if (!emailValue) {
+    errEmailSpanRef && errEmailSpanRef.classList.add('visible');
     createErrMsg(NO_EMAIL);
     return;
   }
-
-  if (!validateEmail(footerEmailValue)) {
-    createErrMsg(WRONG_EMAIL);
-    footerForm.reset();
-    changeBtnStatus();
+  const commentValue = commentInputRef.value.trim();
+  if (!commentValue) {
+    errCommentSpanRef && errCommentSpanRef.classList.add('visible');
+    createErrMsg(NO_COMMENT);
     return;
   }
 
-  const options = {
-    method: 'POST',
-    body: JSON.stringify({ email: footerEmailValue }),
-    headers: {
-      'Content-Type': 'application/json',
-    },
-  };
+  if (!validateEmail(emailValue)) {
+    createErrMsg(WRONG_EMAIL);
+    errEmailSpanRef && errEmailSpanRef.classList.add('visible');
+    return;
+  }
 
-  fetch(`${BASE_URL}subscription`, options)
-    .then(response => {
+  const bodyRequest = { email: emailValue, comment: commentValue };
+
+  try {
+    const response = await axiosInst.post('requests', bodyRequest);
+    if (response) {
       if (response.status >= 200 && response.status < 300) {
-        createOkMsg(SUCCESS_MSG);
+        await modalCreate(
+          response.data,
+          document.querySelector('.modal-backdrop')
+        );
+        createOkMsg('Success!');
+        openModalWindow();
+        formRef.reset();
+        successEmailSpanRef && successEmailSpanRef.classList.add('visible');
       }
-      if (response.status === 409) {
-        createErrMsg(ERROR409_MSG);
-      }
-    })
-    .catch(error => {
-      console.log(error);
-      createErrMsg(ERROR_FETCH);
-    })
-    .finally(() => {
-      footerForm.reset();
-      changeBtnStatus();
-    });
+    }
+  } catch (error) {
+    errEmailSpanRef && errEmailSpanRef.classList.add('visible');
+    console.log(error.message);
+  } finally {
+    changeContolsStatus();
+  }
 }
 
-function changeBtnStatus(event) {
-  footerBtn.disabled = !footerInput.value.trim();
+function changeContolsStatus() {
+  errEmailSpanRef && errEmailSpanRef.classList.remove('visible');
+  errCommentSpanRef && errCommentSpanRef.classList.remove('visible');
+  successEmailSpanRef && successEmailSpanRef.classList.remove('visible');
+
+  footerBtn.disabled =
+    !emailInputRef.value.trim() || !commentInputRef.value.trim();
 }
 
-changeBtnStatus();
+changeContolsStatus();

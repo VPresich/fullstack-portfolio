@@ -73,6 +73,7 @@
 }
 
 .about-arrow-btn-next {
+  position: absolute;
   right: 0;
   top: 50%;
   transform: translateY(-50%);
@@ -105,7 +106,6 @@
 
 .swiper-button-next::after {
   display: none;
-  right: 0;
 }
 
 @media screen and (min-width: 768px) {
@@ -129,4 +129,7 @@
 }
 
 @media screen and (min-width: 1440px) {
+  .about-skills-container {
+    width: 1200px;
+  }
 }
