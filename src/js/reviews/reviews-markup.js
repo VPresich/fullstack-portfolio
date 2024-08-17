@@ -15,7 +15,7 @@ function reviewsMarkup(reviews = []) {
     ) =>
       strMarkup +
       `
-       <li class="reviews-list-item  swiper-slide" id="review-${_id}">
+       <li class="reviews-list-item swiper-slide" id="review-${_id}">
         <img
           class="reviews-list-avatar"
           src="${avatar_url}"

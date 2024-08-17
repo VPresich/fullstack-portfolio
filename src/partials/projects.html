@@ -1,8 +1,9 @@
 <section class="projects-section">
   <div class="container projects-container">
     <h2 class="projects-title">Projects</h2>
-    <ul class="projects-list">
-      <!-- <li class="projects-item">
+    <dim class="projects-swiper-container swiper">
+      <ul class="projects-list swiper-wrapper">
+        <!-- <li class="projects-item">
         <div class="project-info-container">
           <ul class="project-lang-list">
             <li class="projects-lang-item">
@@ -42,26 +43,25 @@
           </picture>
         </div>
       </li> -->
-    </ul>
-    <button class="projects-arrow-btn-next">
-      <svg
-        class="projects-arrow-icon"
-        aria-label="Arrow icon"
-        width="28"
-        height="28"
-      >
-        <use href="/img/icons/symbols.svg#icon-arrow-right"></use>
-      </svg>
-    </button>
-    <button class="projects-arrow-btn-prev">
-      <svg
-        class="projects-arrow-icon"
-        aria-label="Arrow icon"
-        width="28"
-        height="28"
-      >
-        <use href="/img/icons/symbols.svg#icon-arrow-left"></use>
-      </svg>
-    </button>
+      </ul>
+    </dim>
+    <dim class="custom-container-buttons projects-buttons">
+      <button class="custom-btn-prev projects-btn-prev">
+        <svg
+          class="custom-icon-prev projects-icon-prev"
+          aria-label="Arrow icon left"
+        >
+          <use href="/img/icons/symbols.svg#icon-arrow-left"></use>
+        </svg>
+      </button>
+      <button class="custom-btn-next projects-btn-next">
+        <svg
+          class="custom-icon-next projects-icon-next"
+          aria-label="Arrow icon right"
+        >
+          <use href="/img/icons/symbols.svg#icon-arrow-right"></use>
+        </svg>
+      </button>
+    </dim>
   </div>
 </section>

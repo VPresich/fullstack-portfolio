@@ -3,7 +3,7 @@ function projectsMarkup(projectsUrl = []) {
     (strMarkup, { url1x, url2x }) =>
       strMarkup +
       `
-       <li class="projects-item">
+       <li class="projects-item swiper-slide">
         <div class="project-info-container">
           <ul class="project-lang-list">
             <li class="projects-lang-item">
