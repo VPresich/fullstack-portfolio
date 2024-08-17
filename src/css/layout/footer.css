@@ -1,5 +1,5 @@
 .footer-section {
-  padding-top: 64px;
+  padding-top: 96px;
   padding-bottom: 32px;
 }
 
@@ -191,7 +191,7 @@
 
 @media screen and (min-width: 768px) {
   .footer-section {
-    padding-top: 88px;
+    padding-top: 176px;
     padding-bottom: 169px;
   }
 
@@ -257,11 +257,11 @@
 
 @media screen and (min-width: 1440px) {
   .footer-section {
-    padding-top: 80px;
+    padding-top: 244px;
   }
 
   .footer-container {
-    padding-left: 164px;
+    padding-left: 196px;
   }
 
   .footer-email-wrapper {
