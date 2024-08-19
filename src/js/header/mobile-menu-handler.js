@@ -25,7 +25,6 @@ function handleCloseMobileMenu() {
 function handleScrollDocument(event) {
   event.preventDefault();
   const item = event.target;
-  console.log('item:', item);
   if (!item.matches('a')) return;
   const targetId = item.getAttribute('href').substring(1);
   scrollToElement(targetId);

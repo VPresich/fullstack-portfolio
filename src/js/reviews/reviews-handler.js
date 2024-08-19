@@ -1,5 +1,5 @@
-//import getReviewsList from './get-reviews';
-import { getReviewsList } from './get-reviews';
+import getReviewsList from './get-reviews';
+//import { getReviewsList } from './get-reviews';
 import Swiper from 'swiper';
 import { Navigation } from 'swiper/modules';
 

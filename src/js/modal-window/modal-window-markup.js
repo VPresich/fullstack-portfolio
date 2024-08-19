@@ -1,7 +1,6 @@
 import iconURL from '../../img/icons/symbols.svg';
 
 function modalWindowMarkup({ title, message }) {
-  console.log(message);
   return `
         <div class="modal-window">
           <div class="modal-container">

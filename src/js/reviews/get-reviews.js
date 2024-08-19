@@ -12,9 +12,7 @@ async function getReviews() {
     const response = await axiosInst.get('reviews');
     if (response && response.status === 200) {
       console.log('STATUS', response.status);
-
       const reviewsListLen = response.data?.length;
-      console.log(reviewsListLen);
 
       if (!reviewsListLen) {
         createErrMsg('Reviews not found');
@@ -36,6 +34,5 @@ export default getReviews;
 
 // for testing swiper
 export async function getReviewsList() {
-  console.log(data);
   reviewsCreate(data, reviewsListRef);
 }
