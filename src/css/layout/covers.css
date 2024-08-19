@@ -1,49 +1,3 @@
-/* .content {
-  position: relative;
-}
-
-.marquee {
-  position: absolute;
-  right: -800px;
-  left: 0;
-  overflow: hidden;
-  font-family: 'Pridi', sans-serif;
-  font-weight: 600;
-  font-size: 34px;
-  text-transform: uppercase;
-}
-
-.marquee__inner {
-  height: 100vh;
-  display: flex;
-  transform: rotate(16deg);
-}
-
-.marquee__line {
-  background-color: #ffdc00;
-  flex-shrink: 0;
-  margin-right: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: calc(100% / 8);
-  white-space: nowrap;
-  animation-name: marqueeLine;
-  animation-duration: 5s;
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: infinite;
-}
-
-@keyframes marqueeLine {
-  from {
-    transform: translateX(-20%);
-  }
-
-  to {
-    transform: translateX(-180%);
-  }
-} */
-
 .covers-section {
   max-width: 375px;
   background-image: url('/img/covers/cover-mobile@1x.webp');
@@ -53,6 +7,55 @@
   background-size: cover;
   margin: 0 auto;
   height: 960px;
+}
+
+.cover-marquee {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.cover-marquee-inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.cover-marquee-line {
+  display: flex;
+  flex-wrap: nowrap;
+  column-gap: 20px;
+  align-items: center;
+  width: 900%;
+  transform: rotate(16deg);
+}
+
+.cover-marquee-img {
+  width: 282px;
+  height: auto;
+  margin: 0;
+  animation-name: marquee;
+  animation-duration: 5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(-20%);
+  }
+
+  to {
+    transform: translateX(-180%);
+  }
 }
 
 @media screen and (min-resolution: 192dpi) and (max-width: 375px),
@@ -70,6 +73,13 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+  }
+
+  .cover-marquee-img {
+    width: 544px;
+    column-gap: 40px;
+    height: auto;
+    margin: 0;
   }
 }
 
