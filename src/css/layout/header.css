@@ -34,17 +34,31 @@
   color: var(--main-text);
 }
 
-.header-navigation {
-  position: relative;
-}
-
 .header-menu-btn,
 .header-order-link {
   display: none;
 }
 
+.header-navigation {
+  position: relative;
+}
+
 .header-menu {
   display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  transform: translateX(-25%);
+  flex-direction: column;
+  align-items: center;
+  list-style: none;
+  width: 120px;
+  top: 50%;
+  left: 0;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  z-index: 20;
 }
 
 .header-mobile-menu-btn {
@@ -56,6 +70,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: background-color 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-mobile-menu-btn-icon {
@@ -69,7 +84,7 @@
   }
 
   .header-menu-btn {
-    padding: 10px;
+    padding: 0 10px;
     width: 60px;
     height: 39px;
     display: block;
@@ -83,6 +98,11 @@
     text-decoration: underline;
     text-decoration-skip-ink: none;
     color: var(--main-text);
+    transition: color 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .header-menu-btn:hover {
+    color: var(--button-text);
   }
 
   .header-order-link {
@@ -92,28 +112,21 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: var(--button-text);
-
+    background-color: var(--button-text);
     font-family: 'InterTight', sans-serif;
     font-weight: 500;
     font-size: 16px;
     letter-spacing: -0.02em;
     color: var(--main-text);
+    transition: background-color 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .header-order-link:hover {
-    background: var(--button-hover);
+    background-color: var(--button-hover);
   }
 
   .header-menu.isopen {
-    position: absolute;
-    width: 151px;
-    top: 50%;
-    left: 0;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 8px;
   }
 
   .header-menu-item-link {
@@ -121,8 +134,12 @@
     font-weight: 500;
     font-size: 16px;
     letter-spacing: -0.02em;
-
     color: var(--main-text);
+    transition: color 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .header-menu-item-link:hover {
+    color: var(--button-hover);
   }
 }
 
