@@ -21,6 +21,12 @@
   gap: 8px;
 }
 
+.header-logo-image {
+  border-radius: 18px;
+  width: 80px;
+  height: 80px;
+}
+
 .header-logo-text {
   font-weight: 500;
   font-size: 16px;
@@ -35,10 +41,6 @@
 .header-menu-btn,
 .header-order-link {
   display: none;
-}
-
-.header-navigation {
-  display: relative;
 }
 
 .header-menu {
@@ -110,6 +112,7 @@
     left: 0;
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 8px;
   }
 
@@ -125,50 +128,3 @@
 
 @media screen and (min-width: 1440px) {
 }
-
-/* <header class="header-page fixed-menu">
-  <div class="container header-container">
-    <a class="logotype link" href="./index.html">
-      <img
-        class="logotype-icon"
-        src="./img/icons/logo.svg"
-        alt="logotype"
-        width="44"
-        height="39"
-      />
-      <span>Jeferson*</span>
-    </a>
-
-    <button type="button" class="header-menu-btn js-header-menu-btn">
-      Menu
-    </button>
-    <nav class="header-navigation js-header-navigation">
-      <ul class="header-menu">
-        <li>
-          <a href="#" class="header-menu-item-link">About me</a>
-        </li>
-        <li>
-          <a href="#" class="header-menu-item-link">Benefits</a>
-        </li>
-        <li>
-          <a href="#" class="header-menu-item-link">Projects</a>
-        </li>
-        <li>
-          <a href="#" class="header-menu-item-link">FAQ</a>
-        </li>
-      </ul>
-    </nav>
-    <span>
-      <a class="header-order-link" href="#">Order the project</a>
-    </span>
-
-    <button
-      type="button"
-      class="header-mobile-menu-btn js-header-mobile-menu-btn"
-    >
-      <svg class="header-mobile-menu-btn-icon" aria-label="Burger button icon">
-        <use href="./img/icons.svg#icon-burger"></use>
-      </svg>
-    </button>
-  </div>
-</header> */
