@@ -1,6 +1,11 @@
 export function marqueeInnerMarkup(projectsUrl = []) {
-  const createLineMarkup = () =>
-    projectsUrl.reduce(
+  const createLineMarkup = (shift = 0) => {
+    const shiftedProjectsUrl = [
+      ...projectsUrl.slice(shift),
+      ...projectsUrl.slice(0, shift),
+    ];
+
+    return shiftedProjectsUrl.reduce(
       (strMarkup, { url1x, url2x }) =>
         strMarkup +
         `        
@@ -22,14 +27,17 @@ export function marqueeInnerMarkup(projectsUrl = []) {
         `,
       ''
     );
+  };
 
-  const lineMarkup = createLineMarkup();
+  const lineMarkup1 = createLineMarkup(0);
+  const lineMarkup2 = createLineMarkup(3);
+  const lineMarkup3 = createLineMarkup(6);
 
   return `
     <div class="cover-marquee-inner">
-      <div class="cover-marquee-line">${lineMarkup}</div>
-      <div class="cover-marquee-line">${lineMarkup}</div>
-      <div class="cover-marquee-line">${lineMarkup}</div>
+      <div class="cover-marquee-line">${lineMarkup1}</div>
+      <div class="cover-marquee-line">${lineMarkup2}</div>
+      <div class="cover-marquee-line">${lineMarkup3}</div>
     </div>
   `;
 }
