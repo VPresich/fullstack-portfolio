@@ -15,5 +15,3 @@ async function initializeFaqAccordion() {
     console.log(error.message);
   }
 }
-
-// new Accordion('.faq-acc-container');

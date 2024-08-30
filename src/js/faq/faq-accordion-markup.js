@@ -5,7 +5,7 @@ function faqAccordionMarkup(faqList = []) {
     (strMarkup, { question, answer }) =>
       strMarkup +
       `
-       <li class="ac faq-acc-item">
+  <li class="ac faq-acc-item">
     <h3 class="faq-acc-header ac-header ac-trigger">
      ${question}
       <button type="button" class="faq-acc-button">
@@ -26,7 +26,7 @@ function faqAccordionMarkup(faqList = []) {
       </p>
     </div>
   </li>
-      `,
+  `,
     ''
   );
 }
