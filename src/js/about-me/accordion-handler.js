@@ -1,10 +1,3 @@
-// import Accordion from 'accordion-js';
-
-// const accordion = new Accordion('.accordion-container', {
-//   duration: 500,
-//   openOnInit: [0],
-// });
-
 import Accordion from 'accordion-js';
 import aboutAccodionListCreate from './about-accordion-create';
 import aboutMeItems from '../helpers/data/aboutme-data';

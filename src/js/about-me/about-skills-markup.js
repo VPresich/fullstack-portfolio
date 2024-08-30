@@ -1,12 +1,12 @@
-const aboutSkillsMarkup = async (skillsList = []) => {
+const aboutSkillsMarkup = (skillsList = []) => {
   return skillsList.reduce(
-    (strMarkup, skill) =>
+    (strMarkup, skill, index) =>
       strMarkup +
       `
-    <li class="about-skills-item swiper-slide">
-        <span>${skill}</span>
-    </li>
-  `,
+      <li class="about-skills-item swiper-slide${index === 0 ? ' active' : ''}">
+          <span>${skill}</span>
+      </li>
+    `,
     ''
   );
 };
