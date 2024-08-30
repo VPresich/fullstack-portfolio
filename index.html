@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Fullstack Portfolio</title>
     <script type="module" crossorigin src="/fullstack-portfolio/commonHelpers.js"></script>
-    <link rel="modulepreload" crossorigin href="/fullstack-portfolio/assets/vendor-CN-mpBkS.js">
+    <link rel="modulepreload" crossorigin href="/fullstack-portfolio/assets/vendor-CZdjGj8m.js">
     <link rel="stylesheet" crossorigin href="/fullstack-portfolio/assets/vendor-DnveWo0P.css">
-    <link rel="stylesheet" crossorigin href="/fullstack-portfolio/assets/index-CjjryZhC.css">
+    <link rel="stylesheet" crossorigin href="/fullstack-portfolio/assets/index-BzOH3Qe-.css">
   </head>
   <body>
     <main>
@@ -24,6 +24,7 @@
           class="header-logo-image"
           src="data:image/webp;base64,UklGRqQDAABXRUJQVlA4IJgDAADQEgCdASpQAFAAPpE8m0oloyIhqlQK0LASCWMA0TElM9VuAOkmXjWkxkyvTuz+svYK3Ste1waMTv8JBDOcvfcfcpar6SDN7y2Jsq9H1Ga6IxXYt08nOHNtEWilCsa7y62KDlj0660CBgjCIghmxb4i5vwFeZeWCHUPYYQ9+qZHkfTwWcumAcbXe6zo44bcwaZI8vljKBGENq4ydgM/ggAA/v7tPsNf8b5iDIT7iiRWDcyIAdIBkvv+jRu32bxRYowgMSKpHV6T9rp4YJ3mX1fpvOl8nLr8+tzW92VRz1UvympOn7TIeEmB72pxQ6V+N/wKgXgBt2hyB1QbVQsVW1ZKZmsAr31+SQEK5H7DpZ4ag+TG6Ux/0NllYnF6jZ75eMgyKQ7pB6KOllImOeuwyoq09TLPWXJlnJRXaDRSuG+HUfQq2bS4FlcAiUbGr2yu1MPUMIAmxO83Wl+FDd8+du2DCz8ohyB4TglG8ZlybOwq9EtnjzWdE0ChDWbZYmiSQzapzjwKlN74086RKw+eexm9wvyDn9IYZ8cy4UP+IIyAjM2gd5kOZ1D0dH0X/tDBElcGvTnkrDLw4wluuwfDg1IL6Z3IZiC5O2Pd1afkfkVWbncRJrdE3gDtYydQDHuLPRAXZjRydYkVCYGPhOQq9+TJxF0HQznO/O99Y1gDrTVrhlMzXs/+9hsfWqGiPc7yGnufCtZLK3R//GA64wwpLzf7UzhsSpDEPOjrnUb36U/Fkqm0X+1N0vhsQAaA1ZWgh/o3NwXft2oHmpp8S9dDioSFZGN2Zokuyik/NYk/Mgt+Fr7rDJQmbyzDop4lJDaSkdcN9SUIzWx5qkJitAIQzGEQnMZ3r6vzU+X6qJP79Z8Hd1luvfu2/S7ll5CFUhOWdIPuJUl+26lY3qHozyhf1qWPbqs8R6dh58aHB1nqrYgWPnjGaFcJJBSa7qI3qDqwlY1FtzLc0uPJqYnD/d9rKq6Wcub1LnHEvKo3zbN++QlkRAtbGXF8FMzBEN8mfwx1uDN4piQPFkk0N0Y/2X4cl4BZayH2foNLxl5V0uiFr+N5yp9tQqNymJp/7izOtaD2xqAqa/g/wtunxHz2dUmBPZGhi7wxFSK4G9APtFgWVVssq8IPUCjYnOSarPGoWr+bD2txEUGBCQmhLERvu+ACmroGsLRE2ViaAxrbInAWpMoej4v1j+ivfalg8l7ty+Smatf3bnoiKoAAAA=="
           alt="Photo of Jefferson"
+          loading="lazy"
           width="80"
           height="80"
         />
@@ -65,16 +66,26 @@
         width="28"
         height="28"
       >
-        <use href="/fullstack-portfolio/assets/symbols-C58uWv6D.svg#icon-menu"></use>
+        <use href="/fullstack-portfolio/assets/symbols-BFynSz_H.svg#icon-menu"></use>
       </svg>
     </button>
   </div>
 </header>
 
-      <section class="hero-section">
+      <section
+  class="hero-section lazy-bgr"
+  data-bgr-src-mobile1x="/img/hero/hero-mobile.png"
+  data-bgr-src-mobile2x="/img/hero/hero-mobile@2x.png"
+  data-bgr-src-tablet1x="/img/hero/hero-tablet@1x.png"
+  data-bgr-src-tablet2x="/img/hero/hero-tablet@1x.png"
+  data-bgr-src-desktop1x="/img/hero/hero-desktop@1x.png"
+  data-bgr-src-desktop2x="/img/hero/hero-desktop@2x.png"
+  id="id-hero"
+>
   <div class="container hero-container">
     <h1 class="hero-title">
-      Hello. I&#39;m Fullstack developer Lloyd Jefferson.
+      Hello. <br />
+      I&#39;m Fullstack developer Lloyd Jefferson.
     </h1>
     <div class="last-line">
       <ul class="hero-social-list list">
@@ -111,12 +122,12 @@
             target="_blank"
             rel="noopener"
             href="https://github.com/VPresich/fullstack-portfolio"
-            >gh
+            >GH
           </a>
         </li>
       </ul>
       <address class="hero-address">
-        <a href="email:lloydjefferson@gmail.com" class="hero-email-link link"
+        <a href="mailto:lloydjefferson@gmail.com" class="hero-email-link link"
           >lloydjefferson@gmail.com</a
         >
       </address>
@@ -155,6 +166,7 @@
       class="about-image"
       src="./img/about-me/about-mobile@1x.webp"
       alt="photo of Jefferson"
+      loading="lazy"
     />
   </picture>
 </div>
@@ -171,7 +183,7 @@
           width="18"
           height="18"
         >
-          <use href="/fullstack-portfolio/assets/symbols-C58uWv6D.svg#icon-dropdown"></use>
+          <use href="/fullstack-portfolio/assets/symbols-BFynSz_H.svg#icon-dropdown"></use>
         </svg>
       </button>
     </h3>
@@ -207,7 +219,7 @@
       Role
       <button type="button" class="about-acc-button">
         <svg class="about-acc-icon" aria-label="Arrow icon">
-          <use href="/fullstack-portfolio/assets/symbols-C58uWv6D.svg#icon-dropdown"></use>
+          <use href="/fullstack-portfolio/assets/symbols-BFynSz_H.svg#icon-dropdown"></use>
         </svg>
       </button>
     </h3>
@@ -231,7 +243,7 @@
           width="28"
           height="28"
         >
-          <use href="../img/icons/symbols.svg#icon-dropdown"></use>
+          <use href="/fullstack-portfolio/assets/symbols-BFynSz_H.svg#icon-dropdown"></use>
         </svg>
       </button>
     </h3>
@@ -239,11 +251,12 @@
     <div class="about-acc-panel ac-panel">
       <ul class="about-acc-list">
         <li class="about-acc-list-item">
-          2018 - 2019 / Frontend Development Diploma, GoIT IT School, New York
+          2018 - 2019 / Frontend Development Diploma, GoIT IT <br />
+          School, New York
         </li>
         <li class="about-acc-list-item">
-          2019 - 2020 / Advanced Web Development Certificate, GoIT IT School,
-          New York
+          2019 - 2020 / Advanced Web Development Certificate, GoIT IT <br />
+          School, New York
         </li>
         <li class="about-acc-list-item">
           2020 - 2022 / Advanced Blender Animation Techniques, Udemy
@@ -254,7 +267,7 @@
 </ul>
 
     <div class="about-swiper-container">
-  <dim class="about-skills-container swiper">
+  <div class="about-skills-container swiper">
     <ul class="about-skills-list swiper-wrapper">
       <li class="about-skills-item active swiper-slide">
         <span>HTML/CSS</span>
@@ -278,15 +291,10 @@
         <span>Soft skills</span>
       </li>
     </ul>
-  </dim>
+  </div>
   <button class="about-arrow-btn-next">
-    <svg
-      class="about-arrow-icon"
-      aria-label="Arrow icon"
-      width="28"
-      height="28"
-    >
-      <use href="/fullstack-portfolio/assets/symbols-C58uWv6D.svg#icon-arrow-right"></use>
+    <svg class="about-arrow-icon" aria-label="Arrow icon">
+      <use href="/fullstack-portfolio/assets/symbols-BFynSz_H.svg#icon-arrow-right"></use>
     </svg>
   </button>
 </div>
@@ -294,191 +302,65 @@
   </div>
 </section>
 
-      
+      <section class="benefits-section" id="id-benefits">
+  <div class="container container-benefits">
+    <h2 class="benefits-title">Benefits of working with me</h2>
+    <div class="wrap">
+      <ul class="benefits-list">
+        <!-- dynamic list creation -->
+      </ul>
+      <a href="#id-order" class="order-project js-project-order"
+        >Order the project</a
+      >
+    </div>
+  </div>
+</section>
+
       <section class="projects-section" id="id-projects">
   <div class="container projects-container">
     <h2 class="projects-title">Projects</h2>
-    <dim class="projects-swiper-container swiper">
+    <div class="projects-swiper-container swiper">
       <ul class="projects-list swiper-wrapper"></ul>
-    </dim>
-    <dim class="custom-container-buttons projects-buttons">
+    </div>
+    <div class="custom-container-buttons projects-buttons">
       <button class="custom-btn-prev projects-btn-prev">
         <svg
-          class="custom-icon-prev projects-icon-prev"
+          class="custom-icon-prev projects-icon"
           aria-label="Arrow icon left"
         >
-          <use href="/fullstack-portfolio/assets/symbols-C58uWv6D.svg#icon-arrow-left"></use>
+          <use href="/fullstack-portfolio/assets/symbols-BFynSz_H.svg#icon-arrow-left"></use>
         </svg>
       </button>
       <button class="custom-btn-next projects-btn-next">
         <svg
-          class="custom-icon-next projects-icon-next"
+          class="custom-icon-next projects-icon"
           aria-label="Arrow icon right"
         >
-          <use href="/fullstack-portfolio/assets/symbols-C58uWv6D.svg#icon-arrow-right"></use>
+          <use href="/fullstack-portfolio/assets/symbols-BFynSz_H.svg#icon-arrow-right"></use>
         </svg>
       </button>
-    </dim>
+    </div>
   </div>
 </section>
 
       <section class="faq-section" id="id-faq">
   <div class="container faq-container">
     <h2 class="faq-title">FAQ</h2>
-
     <ul class="faq-acc-container accordion-container">
-  <li class="ac faq-acc-item">
-    <h3 class="faq-acc-header ac-header ac-trigger">
-      What programming languages are most often used in your project?
-      <button type="button" class="faq-acc-button">
-        <svg
-          class="faq-acc-icon"
-          aria-label="Arrow icon"
-          width="18"
-          height="18"
-        >
-          <use href="/fullstack-portfolio/assets/symbols-C58uWv6D.svg#icon-dropdown"></use>
-        </svg>
-      </button>
-    </h3>
-
-    <div class="faq-acc-panel ac-panel">
-      <p class="faq-acc-text">
-        In the field of web development, there are various technologies and
-        programming languages. Typically, this includes a combination of
-        frontend (client side) and backend (server side) languages.
-      </p>
-    </div>
-  </li>
-
-  <li class="faq-acc-item ac">
-    <h3 class="faq-acc-header ac-header ac-trigger">
-      What are the deadlines for the project?
-      <button type="button" class="faq-acc-button">
-        <svg
-          class="faq-acc-icon"
-          aria-label="Arrow icon"
-          width="18"
-          height="18"
-        >
-          <use href="/fullstack-portfolio/assets/symbols-C58uWv6D.svg#icon-dropdown"></use>
-        </svg>
-      </button>
-    </h3>
-
-    <div class="faq-acc-panel ac-panel">
-      <p class="faq-acc-text">
-        The terms of project implementation depend to a large extent on a number
-        of factors, such as the scope of the project, its complexity, and the
-        availability of resources. Determining exact deadlines is a difficult
-        task, and it usually occurs during the planning phase of the project.
-      </p>
-    </div>
-  </li>
-
-  <li class="faq-acc-item ac">
-    <h3 class="faq-acc-header ac-header ac-trigger">
-      What payment methods do you accept?
-      <button type="button" class="faq-acc-button">
-        <svg
-          class="faq-acc-icon"
-          aria-label="Arrow icon"
-          width="18"
-          height="18"
-        >
-          <use href="/fullstack-portfolio/assets/symbols-C58uWv6D.svg#icon-dropdown"></use>
-        </svg>
-      </button>
-    </h3>
-
-    <div class="faq-acc-panel ac-panel">
-      <p class="faq-acc-text">
-        Payment through credit and debit cards such as Visa, MasterCard,
-        specialized electronic payment systems such as PayPal, as well as
-        payments in cryptocurrencies such as Bitcoin, Ethereum and others.
-      </p>
-    </div>
-  </li>
-
-  <li class="faq-acc-item ac">
-    <h3 class="faq-acc-header ac-header ac-trigger">
-      How can I contact you?
-      <button type="button" class="faq-acc-button">
-        <svg
-          class="faq-acc-icon"
-          aria-label="Arrow icon"
-          width="18"
-          height="18"
-        >
-          <use href="/fullstack-portfolio/assets/symbols-C58uWv6D.svg#icon-dropdown"></use>
-        </svg>
-      </button>
-    </h3>
-
-    <div class="faq-acc-panel ac-panel">
-      <p class="faq-acc-text">
-        In the field of web development, there are various technologies and
-        programming languages. Typically, this includes a combination of
-        frontend (client side) and backend (server side) languages.
-      </p>
-    </div>
-  </li>
-
-  <li class="faq-acc-item ac">
-    <h3 class="faq-acc-header ac-header ac-trigger">
-      Do you provide advice or support?
-      <button type="button" class="faq-acc-button">
-        <svg
-          class="faq-acc-icon"
-          aria-label="Arrow icon"
-          width="18"
-          height="18"
-        >
-          <use href="/fullstack-portfolio/assets/symbols-C58uWv6D.svg#icon-dropdown"></use>
-        </svg>
-      </button>
-    </h3>
-
-    <div class="faq-acc-panel ac-panel">
-      <p class="faq-acc-text">
-        The terms of project implementation depend to a large extent on a number
-        of factors, such as the scope of the project, its complexity, and the
-        availability of resources. Determining exact deadlines is a difficult
-        task, and it usually occurs during the planning phase of the project.
-      </p>
-    </div>
-  </li>
-
-  <li class="faq-acc-item ac">
-    <h3 class="faq-acc-header ac-header ac-trigger">
-      What does the process of developing a software product look like from idea
-      to implementation?
-      <button type="button" class="faq-acc-button">
-        <svg
-          class="faq-acc-icon"
-          aria-label="Arrow icon"
-          width="18"
-          height="18"
-        >
-          <use href="/fullstack-portfolio/assets/symbols-C58uWv6D.svg#icon-dropdown"></use>
-        </svg>
-      </button>
-    </h3>
-
-    <div class="faq-acc-panel ac-panel">
-      <p class="faq-acc-text">
-        Payment through credit and debit cards such as Visa, MasterCard,
-        specialized electronic payment systems such as PayPal, as well as
-        payments in cryptocurrencies such as Bitcoin, Ethereum and others.
-      </p>
-    </div>
-  </li>
-</ul>
-
+      <!-- dynamic list creation -->
+    </ul>
   </div>
 </section>
 
-      <section class="covers-section">
+      <section
+  class="covers-section lazy-bgr"
+  data-bgr-src-mobile1x="/img/covers/covers-mobile@1x.png"
+  data-bgr-src-mobile2x="/img/covers/covers-mobile@2x.png"
+  data-bgr-src-tablet1x="/img/covers/covers-tablet@1x.png"
+  data-bgr-src-tablet2x="/img/covers/covers-tablet@2x.png"
+  data-bgr-src-desktop1x="/img/covers/covers-desktop@1x.png"
+  data-bgr-src-desktop2x="/img/covers/covers-desktop@2x.png"
+>
   <div class="container">
     <h2 class="covers-title visually-hidden">Cover</h2>
     <div class="covers-marquee"></div>
@@ -492,13 +374,13 @@
       <ul class="reviews-list swiper-wrapper"></ul>
     </div>
 
-    <dim class="custom-container-buttons reviews-buttons">
+    <div class="custom-container-buttons reviews-buttons">
       <button class="custom-btn-prev reviews-btn-prev">
         <svg
           class="custom-icon-prev reviews-icon-prev"
           aria-label="Arrow icon left"
         >
-          <use href="/fullstack-portfolio/assets/symbols-C58uWv6D.svg#icon-arrow-left"></use>
+          <use href="/fullstack-portfolio/assets/symbols-BFynSz_H.svg#icon-arrow-left"></use>
         </svg>
       </button>
       <button class="custom-btn-next reviews-btn-next">
@@ -506,10 +388,10 @@
           class="custom-icon-next reviews-icon-next"
           aria-label="Arrow icon right"
         >
-          <use href="/fullstack-portfolio/assets/symbols-C58uWv6D.svg#icon-arrow-right"></use>
+          <use href="/fullstack-portfolio/assets/symbols-BFynSz_H.svg#icon-arrow-right"></use>
         </svg>
       </button>
-    </dim>
+    </div>
   </div>
 </section>
 
@@ -530,6 +412,7 @@
             class="footer-image"
             src="data:image/webp;base64,UklGRgICAABXRUJQVlA4IPYBAABwCgCdASosACwAPpFEn0slo6Kho4kAsBIJYwDGWaaUWSu/rRZZmmMZvOf/TR5g1GmkiXAin1RREPYRRDzcFAtz+0sxtU/R+o7qFqDQmUR6WM2CPQC8+663fVlKwAD+/qy9csUBsUXOyX3o2m8U3e2gwctsXQQ0CVwac+4JUsDNfBjySLkV4UxwtSVGk2THMoDODfWw9QZOxQFlNoqyR9e7PNEDYzmBoT7QMz4yUUC6ffyGk7ssgCS3pO11Qv9UkfgDc8L1d2fPv9gRD8xfDv2t6Xv/6AbzCFCmqc77xrN1Nkj3PNSaRH8zAwJni27PKTGhnCArYabZOOdWiv/EbX9/L9EZSUuRoZTX3vNMW9XsbtHb2xtdxdSXssdEBzsU4PpybysOxTPpyWCjvQEsWQFH9IjxvBP6JuF4MMo5t9wEqIfGquR+Mlm+ZI/BaojT9G49yk9bRjsGcjLI5WOMAvarL32Txmsot8+VZHf/9QqQ8HqVuPrnSBWS0RhlTxNlu3PK8b34ziZvS4/uOw//XVQS3s10SWPyQIqo9K6T5aP05EB//kqfP3n4Bx6/3rRD+CByDEfYsxcGypwX/sPpMbsmqEqXfmvUDTYskaZ9+6tXj/6EID6k3fCZCm2NvkC/ZuYzu759vfnprH4PgctJqaBqjHBgmYAA"
             alt="photo of Jefferson"
+            loading="lazy"
           />
         </picture>
       </a>
@@ -572,7 +455,7 @@
       <ul class="footer-address">
         <li>
           <a
-            href="email:lloydjefferson@gmail.com"
+            href="mailto:lloydjefferson@gmail.com"
             class="footer-contact footer-email-contact link"
             >lloydjefferson@gmail.com</a
           >
@@ -586,6 +469,9 @@
         </li>
       </ul>
     </address>
+    <button type="button" class="footer-scroll-up js-footer-scroll-up">
+      Scroll up
+    </button>
   </div>
 </footer>
 
@@ -598,7 +484,7 @@
         height="28"
         aria-label="Close icon"
       >
-        <use href="/fullstack-portfolio/assets/symbols-C58uWv6D.svg#icon-x"></use>
+        <use href="/fullstack-portfolio/assets/symbols-BFynSz_H.svg#icon-x"></use>
       </svg>
     </button>
 
@@ -609,11 +495,11 @@
         </li>
 
         <li>
-          <a href="#" class="mobile-menu-item-link">Benefits</a>
+          <a href="#id-benefits" class="mobile-menu-item-link">Benefits</a>
         </li>
 
         <li>
-          <a href="#" class="mobile-menu-item-link">Projects</a>
+          <a href="#id-projects" class="mobile-menu-item-link">Projects</a>
         </li>
 
         <li>
