@@ -1,7 +1,7 @@
 import getReviewsList from './get-reviews';
-//import { getReviewsList } from './get-reviews';
+//import { getReviewsList } from './get-reviews'; //without connection
 import Swiper from 'swiper';
-import { Navigation } from 'swiper/modules';
+import { Navigation, Keyboard } from 'swiper/modules';
 
 let reviewsSwiper;
 
@@ -9,12 +9,16 @@ getReviewsList()
   .then(() => {
     if (!isEnableSwiperContainer) return;
     reviewsSwiper = new Swiper('.reviews-swiper-container', {
-      modules: [Navigation],
+      modules: [Navigation, Keyboard],
       slidesPerView: 1,
       loop: false,
       navigation: {
         nextEl: '.reviews-btn-next',
         prevEl: '.reviews-btn-prev',
+      },
+      keyboard: {
+        enabled: true,
+        onlyInViewport: true,
       },
       breakpoints: {
         768: {
@@ -26,6 +30,8 @@ getReviewsList()
           spaceBetween: 16,
         },
       },
+      speed: 700,
+      effect: 'slide', // ('slide', 'fade', 'cube', 'coverflow', '')
       on: {
         init: updateNavigationState,
         slideChange: updateNavigationState,

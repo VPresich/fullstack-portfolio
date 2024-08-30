@@ -20,6 +20,7 @@ function reviewsMarkup(reviews = []) {
           class="reviews-list-avatar"
           src="${avatar_url}"
           alt="${author} avatar"
+          
         />
         <div class="reviews-list-item-info">
           <h3 class="reviews-list-fullname">${escapeHTML(author)}</h3>

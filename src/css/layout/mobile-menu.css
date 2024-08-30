@@ -5,7 +5,7 @@
   width: 100vw;
   height: 100vh;
 
-  background-image: url('/img/hero/bgr@1x.webp');
+  background-image: url('/img/mobile-menu/mobile-menu@1x.png');
 
   background-repeat: repeat, no-repeat;
   background-position: 0 0;
@@ -21,7 +21,7 @@
 }
 
 .mobile-menu-container {
-  padding-top: 100px;
+  padding-top: 294px;
   padding-bottom: 64px;
   padding-left: 20px;
   padding-right: 20px;
@@ -99,6 +99,6 @@
   screen and (min-resolution: 2dppx) and (max-width: 767px),
   screen and (min-device-pixel-ratio: 2) and (max-width: 767px) {
   .mobile-menu {
-    background-image: url('/img/hero/bgr@2x.webp');
+    background-image: url('/img/mobile-menu/mobile-menu@2x.png');
   }
 }

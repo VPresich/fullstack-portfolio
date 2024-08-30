@@ -4,25 +4,13 @@
   --arrow: #3b3b3b;
   --button-text: #ed3b44;
   --button-hover: #e0373f;
-  --main-text: #fafafa;
+  --main-text: #fff;
   --success: #3cbc81;
   --error: #e74a3b;
+  --defaut-border: rgba(250, 250, 250, 0.2);
 
-  --red: #ed3b44;
-  --red-hover: #e0373f;
-
-  --green-hover: #8ba10e;
-  --green: #c6e327;
-
-  --blue: #265adb;
-  --blue-hover: #0041e8;
-
-  --grey: #38beaf;
-  --grey-hover: #12201f;
-
-  --pink: #e6533c;
-  --pink-hover: #c6311a;
-
-  --orange: #ff7f08;
-  --orange-hover: #d37217;
+  --transparent-text-color: rgba(250, 250, 250, 0.4);
+  --transparent-elements-color: rgba(250, 250, 250, 0.2);
+  --transparent-description-color: rgba(250, 250, 250, 0.6);
+  --border-transparent-color: rgba(28, 29, 32, 0.2);
 }

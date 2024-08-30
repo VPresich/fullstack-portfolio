@@ -1,4 +1,4 @@
-let maxLength = getMaxLengthForViewport();
+let maxLength = 50;
 const atributeName = 'data-original';
 
 export function setupCustomInputHandlers() {
@@ -7,9 +7,6 @@ export function setupCustomInputHandlers() {
     input.addEventListener('change', handleChange);
     input.addEventListener('focus', handleFocus);
     input.addEventListener('blur', handleBlur);
-  });
-  window.addEventListener('resize', () => {
-    maxLength = getMaxLengthForViewport();
   });
 }
 
@@ -43,9 +40,6 @@ function handleChange(event) {
   if (input.hasAttribute(atributeName)) {
     input.dataset.original = currentText;
   }
-  // if (currentText.length > maxLength) {
-  //   input.value = truncateText(currentText, maxLength);
-  // }
 }
 
 function handleFocus(event) {
@@ -60,17 +54,5 @@ function handleBlur(event) {
   const currentText = input.value;
   if (currentText.length > maxLength) {
     input.value = truncateText(currentText, maxLength);
-  }
-}
-
-function getMaxLengthForViewport() {
-  const viewportWidth = window.innerWidth;
-
-  if (viewportWidth < 768) {
-    return 45;
-  } else if (viewportWidth < 1440) {
-    return 28;
-  } else {
-    return 49;
   }
 }

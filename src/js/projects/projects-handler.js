@@ -1,7 +1,7 @@
 import projectsListCreate from './projects-list-create';
-import { projectsUrl } from './data';
+import { projectsUrl } from '../helpers/data/projectsList-data';
 import Swiper from 'swiper';
-import { Navigation } from 'swiper/modules';
+import { Navigation, Keyboard } from 'swiper/modules';
 
 let projectsSwiper;
 
@@ -13,7 +13,7 @@ async function initializeProjectsList() {
   try {
     await projectsListCreate(projectsUrl, projectsListRef);
     projectsSwiper = new Swiper('.projects-swiper-container', {
-      modules: [Navigation],
+      modules: [Navigation, Keyboard],
       slidesPerView: 1,
       spaceBetween: 0,
       loop: false,
@@ -21,6 +21,12 @@ async function initializeProjectsList() {
         nextEl: '.projects-btn-next',
         prevEl: '.projects-btn-prev',
       },
+      keyboard: {
+        enabled: true,
+        onlyInViewport: true,
+      },
+      speed: 1000,
+      effect: 'slide', // ('slide', 'fade', 'cube', 'coverflow', '')
       on: {
         init: updateNavigationState,
         slideChange: updateNavigationState,

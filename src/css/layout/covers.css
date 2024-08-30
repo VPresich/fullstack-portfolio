@@ -7,59 +7,62 @@
   background-repeat: no-repeat;
   background-size: cover;
   margin: 0 auto;
+  overflow: hidden;
 }
 
 .covers-section .container {
-  padding: 0;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .covers-marquee {
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: 508px;
   overflow: hidden;
 }
 
-.cover-marquee-inner {
+.covers-marquee-inner {
   position: absolute;
-  top: 0;
+  top: -120px;
   left: 0;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   display: flex;
   flex-direction: column;
+  gap: 16px;
   align-items: center;
-  justify-content: space-between;
-  transform: rotate(16deg);
 }
 
-.cover-marquee-line {
+.covers-marquee-line {
   display: flex;
   flex-wrap: nowrap;
-  column-gap: 20px;
+  gap: 16px;
   align-items: center;
   width: 900%;
   transform: rotate(16deg);
 }
 
-.cover-marquee-img {
-  max-height: 314px;
-  max-width: auto;
-  margin: 0;
-  animation-name: marquee;
-  animation-duration: 15s;
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: infinite;
+.covers-marquee-picture {
+  display: block;
+  width: 282px;
+  height: 162px;
 }
 
-@keyframes marquee {
-  from {
-    transform: translateX(-20%);
-  }
+.covers-marquee-img {
+  width: 282px;
+  height: 162px;
+  margin: 0;
+  animation-name: marquee;
+  animation-duration: 20s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+  animation-play-state: paused;
+}
 
-  to {
-    transform: translateX(-180%);
-  }
+.animate-covers .covers-marquee-img {
+  animation-play-state: running;
 }
 
 @media screen and (min-resolution: 192dpi) and (max-width: 375px),
@@ -80,42 +83,86 @@
     height: 960px;
   }
 
-  .cover-marquee {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
+  .covers-marquee {
+    height: 960px;
   }
 
-  .cover-marquee-img {
-    max-height: 314px;
-    max-width: auto;
+  .covers-marquee-inner {
+    gap: 32px;
+  }
+
+  .covers-marquee-line {
+    gap: 32px;
+  }
+
+  .covers-marquee-picture,
+  .covers-marquee-img {
+    width: 544px;
+    height: 314px;
   }
 }
 
 @media screen and (min-resolution: 192dpi) and (max-width: 767px),
   screen and (min-resolution: 2dppx) and (max-width: 767px),
   screen and (min-device-pixel-ratio: 2) and (max-width: 767px) {
-  .section-about {
+  .covers-section {
     background-image: url('/img/covers/cover-tablet@2x.webp');
   }
 }
 
 @media screen and (min-width: 1440px) {
   .covers-section {
-    max-width: 1440px;
+    min-width: 1440px;
     background-image: url('/img/covers/cover-desktop@1x.webp');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     height: 960px;
   }
+
+  .covers-marquee {
+    position: relative;
+    width: 100%;
+    height: 960px;
+    overflow: hidden;
+  }
+
+  .covers-marquee-inner {
+    gap: 32px;
+    top: -200px;
+  }
+
+  .covers-marquee-line {
+    width: 400%;
+    gap: 32px;
+    height: 314px;
+  }
+
+  .covers-marquee-picture {
+    display: block;
+    width: 544px;
+  }
+
+  .covers-marquee-img {
+    width: 544px;
+    height: 314px;
+  }
 }
 
-@media screen and (min-resolution: 192dpi) and (max-width: 1440px),
-  screen and (min-resolution: 2dppx) and (max-width: 1440px),
-  screen and (min-device-pixel-ratio: 2) and (max-width: 1440px) {
+@media screen and (min-resolution: 192dpi) and (max-width: 1439px),
+  screen and (min-resolution: 2dppx) and (max-width: 1439px),
+  screen and (min-device-pixel-ratio: 2) and (max-width: 1439px) {
   .covers-section {
     background-image: url('/img/covers/cover-desktop@2x.webp');
+  }
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(350%);
+  }
+
+  to {
+    transform: translateX(-230%);
   }
 }

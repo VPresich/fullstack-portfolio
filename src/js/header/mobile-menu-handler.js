@@ -1,4 +1,4 @@
-import { scrollToElement } from './scroll-to-element';
+import { customScrollToElement } from '../helpers/scroll';
 
 const mobileMenuBtn = document.querySelector('.js-header-mobile-menu-btn');
 const mobileMenuRef = document.querySelector('.js-mobile-menu');
@@ -27,6 +27,6 @@ function handleScrollDocument(event) {
   const item = event.target;
   if (!item.matches('a')) return;
   const targetId = item.getAttribute('href').substring(1);
-  scrollToElement(targetId);
+  customScrollToElement(targetId);
   handleCloseMobileMenu();
 }

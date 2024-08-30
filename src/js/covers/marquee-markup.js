@@ -8,8 +8,8 @@ export function marqueeInnerMarkup(projectsUrl = []) {
     return shiftedProjectsUrl.reduce(
       (strMarkup, { url1x, url2x }) =>
         strMarkup +
-        `        
-          <picture>
+        `<li>        
+          <picture covers-marquee-picture>
             <source
               srcset="
                 ${url1x} 1x,
@@ -18,26 +18,29 @@ export function marqueeInnerMarkup(projectsUrl = []) {
               type="image/webp"
             />
             <img
-              class="cover-marquee-img"
+              class="covers-marquee-img"
               src="${url1x}"
               alt="Project image"
+              loading="lazy"
             />
           </picture>
-      
+        </li>
         `,
       ''
     );
   };
 
   const lineMarkup1 = createLineMarkup(0);
-  const lineMarkup2 = createLineMarkup(3);
-  const lineMarkup3 = createLineMarkup(6);
+  const lineMarkup2 = createLineMarkup(2);
+  const lineMarkup3 = createLineMarkup(4);
+  const lineMarkup4 = createLineMarkup(6);
 
   return `
-    <div class="cover-marquee-inner">
-      <div class="cover-marquee-line">${lineMarkup1}</div>
-      <div class="cover-marquee-line">${lineMarkup2}</div>
-      <div class="cover-marquee-line">${lineMarkup3}</div>
+    <div class="covers-marquee-inner">
+      <ul class="covers-marquee-line">${lineMarkup1}</ul>
+      <ul class="covers-marquee-line">${lineMarkup2}</ul>
+      <ul class="covers-marquee-line">${lineMarkup3}</ul>
+      <ul class="covers-marquee-line">${lineMarkup4}</ul>
     </div>
   `;
 }

@@ -43,6 +43,11 @@
   flex-direction: column;
   row-gap: 32px;
   background-color: transparent;
+  transition: border-color 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.reviews-list-item:hover {
+  border-color: rgba(250, 250, 250, 0.6);
 }
 
 .reviews-list-item-infor {
@@ -84,6 +89,10 @@
 }
 
 @media screen and (min-width: 768px) {
+  .reviews-container {
+    padding-bottom: 96px;
+  }
+
   .reviews-section {
     padding-top: 96px;
   }

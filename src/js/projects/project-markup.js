@@ -23,7 +23,7 @@ function projectsMarkup(projectsUrl = []) {
             <p class="project-description">
               Programming Across Borders: Ideas, Technologies, Innovations
             </p>
-            <a href="#" class="project-link js-project-link">See project</a>
+           <a href="https://github.com/VPresich/fullstack-portfolio" class="project-link js-project-link" target="_blank">See project</a>
           </div>
         </div>
         <div class="projects-img-wrapper">
@@ -36,9 +36,10 @@ function projectsMarkup(projectsUrl = []) {
               type="image/webp"
             />
             <img
-              class="projects-img"
+              class="projects-img lazy"
               src="${url1x}"
               alt="Project 01 main page"
+              loading="lazy"
             />
           </picture>
         </div>

@@ -1,8 +1,7 @@
 .hero-section {
-  width: 100%;
   height: 812px;
-  background-image: url('/img/hero/bgr@1x.webp');
-  background-repeat: repeat, no-repeat;
+  background-image: url('/img/hero/hero-mobile.png');
+  background-repeat: no-repeat;
   background-position: 0 0;
   background-size: 100% 100%;
   backdrop-filter: blur(100px);
@@ -22,7 +21,7 @@
   font-family: 'InterTight', sans-serif;
   font-size: 50px;
   line-height: 100%;
-  letter-spacing: -0.03em;
+  letter-spacing: -1.5px;
   text-transform: uppercase;
 }
 
@@ -40,6 +39,7 @@
 }
 
 .hero-social-list-item {
+  cursor: pointer;
   border: 1px solid rgba(250, 250, 250, 0.2);
   border-radius: 60px;
   padding: 10px 12px;
@@ -48,6 +48,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: border-color 500ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hero-social-list-item:hover,
+.hero-social-list-item:hover {
+  cursor: pointer;
+  border-color: #fafafa;
 }
 
 .hero-social-list-link {
@@ -55,7 +62,7 @@
   font-weight: 500;
   font-size: 14px;
   text-transform: uppercase;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.28px;
 }
 
 .hero-address {
@@ -66,19 +73,35 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: border-color 500ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hero-email-link {
-  font-family: var(--font-family);
+  font-family: 'InterTight', sans-serif;
   font-weight: 500;
   font-size: 14px;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.28px;
+}
+
+.hero-address:hover,
+.hero-address:hover {
+  cursor: pointer;
+  border-color: #fafafa;
+}
+
+@media screen and (min-resolution: 192dpi) and (min-width: 375px),
+  screen and (min-resolution: 2dppx) and (min-width: 375px),
+  screen and (min-device-pixel-ratio: 2) and (min-width: 375px) {
+  .hero-section {
+    background-image: url('/img/hero/hero-mobile@2x.png');
+  }
 }
 
 @media screen and (min-width: 768px) {
   .hero-section {
     height: 1024px;
     padding-top: 300px;
+    background-image: url('/img/hero/hero-tablet@1x.png');
   }
 
   .hero-container {
@@ -87,6 +110,7 @@
 
   .hero-title {
     font-size: 90px;
+    letter-spacing: -2.7px;
   }
 
   .last-line {
@@ -104,6 +128,7 @@
 
   .hero-social-list-link {
     font-size: 16px;
+    letter-spacing: -0.32px;
   }
 
   .hero-address {
@@ -113,11 +138,35 @@
 
   .hero-email-link {
     font-size: 16px;
+    letter-spacing: -0.32px;
+  }
+}
+
+@media screen and (min-resolution: 192dpi) and (min-width: 767px),
+  screen and (min-resolution: 2dppx) and (min-width: 767px),
+  screen and (min-device-pixel-ratio: 2) and (min-width: 767px) {
+  .hero-section {
+    background-image: url('/img/hero/hero-tablet@2x.png');
   }
 }
 
 @media screen and (min-width: 1440px) {
   .hero-section {
     height: 900px;
+    background-image: url('/img/hero/hero-desktop@1x.png');
+  }
+
+  .hero-title {
+    width: 1090px;
+
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-resolution: 192dpi) and (min-width: 1439px),
+  screen and (min-resolution: 2dppx) and (min-width: 1439px),
+  screen and (min-device-pixel-ratio: 2) and (min-width: 1439px) {
+  .hero-section {
+    background-image: url('/img/hero/hero-desktop@2x.png');
   }
 }

@@ -4,6 +4,7 @@
 }
 
 .footer-container {
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: 63px;
@@ -73,7 +74,7 @@
 .footer-input:hover,
 .footer-input:active,
 .footer-input:focus {
-  border-color: var(--main-text);
+  border-color: rgba(250, 250, 250, 0.6);
 }
 
 .footer-input::placeholder {
@@ -146,7 +147,7 @@
   border: none;
   outline: none;
   margin: 0;
-  font-display: flex;
+  display: flex;
   justify-content: center;
   align-items: center;
   flex-shrink: 0;
@@ -191,7 +192,7 @@
 }
 
 .footer-contact:hover {
-  border-color: var(--main-text);
+  border-color: rgba(250, 250, 250, 0.6);
 }
 
 .footer-email-contact {
@@ -210,6 +211,47 @@
   background-color: var(--cards);
 }
 
+.footer-scroll-up {
+  position: absolute;
+  bottom: 50px;
+  left: 10px;
+  padding: 10px 0;
+  width: 100px;
+  height: 39px;
+  display: block;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  font-family: 'InterTight', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: -0.02em;
+  text-decoration-skip-ink: none;
+  color: var(--main-text);
+  transition: color 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 400;
+}
+
+.footer-scroll-up:hover {
+  color: var(--button-text);
+}
+
+.footer-scroll-up::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 6px;
+  width: 60%;
+  height: 1.5px;
+  background-color: var(--main-text);
+  transition: color 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer-scroll-up:hover::after {
+  background-color: var(--button-text);
+}
+
 @media screen and (min-width: 768px) {
   .footer-section {
     padding-top: 176px;
@@ -217,8 +259,7 @@
   }
 
   .footer-container {
-    /* background-image: url('/img/footer/bgr-tablet@1x.webp'); */
-    background-image: url('/img/covers/cover-tablet@1x.webp');
+    background-image: url('/img/footer/bgr-tablet@1x.webp');
     background-repeat: no-repeat;
     background-position: bottom right;
     backdrop-filter: blur(100px);
@@ -280,14 +321,18 @@
   .footer-phone-contact {
     width: 171px;
   }
+
+  .footer-scroll-up {
+    left: 620px;
+    bottom: 10px;
+  }
 }
 
 @media screen and (min-resolution: 192dpi) and (min-width: 768px),
   screen and (min-resolution: 2dppx) and (min-width: 768px),
   screen and (min-device-pixel-ratio: 2) and (min-width: 768px) {
   .footer-container {
-    background-image: url('/img/covers/cover-tablet@2x.webp');
-    /* background-image: url('/img/footer/bgr-tablet@2x.webp'); */
+    background-image: url('/img/footer/bgr-tablet@2x.webp');
   }
 }
 
@@ -297,8 +342,7 @@
   }
 
   .footer-container {
-    /* background-image: url('/img/footer/bgr-desktop@1x.webp'); */
-    background-image: url('/img/covers/cover-desktop@1x.webp');
+    background-image: url('/img/footer/bgr-desktop@1x.webp');
     background-repeat: no-repeat;
     background-position: bottom right;
     background-size: 400px 636px;
@@ -313,13 +357,17 @@
     width: 390px;
     margin-right: 54px;
   }
+
+  .footer-scroll-up {
+    left: 1130px;
+    bottom: 20px;
+  }
 }
 
 @media screen and (min-resolution: 192dpi) and (min-width: 1440px),
   screen and (min-resolution: 2dppx) and (min-width: 1440px),
   screen and (min-device-pixel-ratio: 2) and (min-width: 1440px) {
   .footer-container {
-    /* background-image: url('/img/footer/bgr-desktop@2x.webp'); */
-    background-image: url('/img/covers/cover-desktop@2x.webp');
+    background-image: url('/img/footer/bgr-desktop@2x.webp');
   }
 }
