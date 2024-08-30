@@ -50,7 +50,7 @@
 }
 
 .benefit-icon {
-  stroke: #fafafa;
+  stroke: var(--main-text);
   fill: none;
 }
 

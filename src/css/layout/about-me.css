@@ -89,8 +89,8 @@
   top: 50%;
   transform: translateY(-50%);
   border-radius: 50%;
-  width: 26px;
-  height: 26px;
+  width: 24px;
+  height: 24px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -172,8 +172,8 @@
   }
 
   .about-arrow-btn-next {
-    width: 40px;
-    height: 40px;
+    width: 28px;
+    height: 28px;
   }
 }
 
@@ -188,6 +188,17 @@
 
   .about-info-wrapper {
     flex-direction: row;
+  }
+
+  .about-swiper-container {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  .about-arrow-btn-next {
+    right: 32px;
+    width: 32px;
+    height: 32px;
   }
 
   .about-text-wrapper {
